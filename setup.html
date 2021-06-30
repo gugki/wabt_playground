@@ -2,4 +2,19 @@ for installation and setup, I'm following this guidance https://github.com/WebAs
 to see help options: bin/wat2wasm --help 
 to see the version that currently running: bin/wat2wasm --version
 
+usage:
+wat2wasm
+
+create file .wat with text editor. I saved the empty.wat under folder /Users/emma/Public/wabt_test/ 
+content of empty.wat is:
+(module)
+
+run this command for parse and typecheck empty.wat: bin/wat2wasm /Users/emma/Public/wabt_test/empty.wat 
+
+run this command for parse empty.wat and write to binary file empty.wasm: bin/wat2wasm /Users/emma/Public/wabt_test/empty.wat -o /Users/emma/Public/wabt_test/empty.wasm 
+this command shall produce an output called empty.wasm 
+
+run this command for parse binary file empty.wasm and write text file empty_to_ori.wat: bin/wasm2wat /Users/emma/Public/wabt_test/empty.wasm -o /Users/emma/Public/wabt_test/empty_to_ori.wat
+
+
 
